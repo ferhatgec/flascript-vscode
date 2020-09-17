@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FlaScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#multilinecomments"
+		}, 
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.flascript",
+				"match": "\\b(exec|var|random|rcolorized|colorized|read|ifdef|endif|import|exit|execout|exec|for|return|fprintf|print|fprintln|main()|execpp|defin|func|if|else|while|)\\b"
+			},
+			{
+				"name": "keyword",
+				"match": "true|false|failure|success"
+			},
+			{
+				"name": "keyword.other.flascript",
+				"match": "->>|->|<-|>(\\s*)\\w+|@"
+			},
+			{
+				"name": "keyword.operator.flascript",
+				"match": "(==)|(!=)|(>>)|(<<)|(!!)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.flascript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.flascript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"multilinecomments": {
+			"name": "comment.block.flascript",
+			"begin": "/>",
+			"end": "</",
+			"patterns": [
+				{
+					"name": "constant.character.escape.flascript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"singlelinecomments": {
+			"name": "comment.block.flascript",
+			"begin": "//",
+			"patterns": [
+				{
+					"name": "constant.character.escape.flascript",
+					"match": "\\\\."
+				}
+			]
+		}, 
+		"variables" : {
+			"name": "variable.control.flascript",
+			"begin": "var",
+			"end": "<-",
+			"patterns": [
+				{
+					"name": "constant.character.escape.flascript"
+				}
+			]
+		}
+	},
+	"scopeName": "source.fls"
+}

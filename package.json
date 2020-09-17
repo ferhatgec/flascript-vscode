@@ -1,0 +1,41 @@
+{
+    "name": "flascript",
+    "displayName": "FlaScript",
+    "description": "FlaScript language support for Visual Studio Code",
+    "version": "0.3.2",
+    "icon": "resource/FlaScript_Logo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ferhatgec/flascript-vscode"
+    },
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Language Packs",
+        "Languages",
+        "Testing",
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "flascript",
+                "path": "./snippets/flascript.json"
+            }
+        ],
+        "languages": [{
+            "id": "flascript",
+            "aliases": ["FlaScript", "flascript"],
+            "extensions": [".fls", ".flsh"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "flascript",
+            "scopeName": "source.fls",
+            "path": "./syntaxes/.tmLanguage.json"
+        }]
+    }
+}
+
