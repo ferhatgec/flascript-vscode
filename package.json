@@ -1,5 +1,6 @@
 {
     "name": "flascript",
+    "publisher": "ferhatgec",
     "displayName": "FlaScript",
     "description": "FlaScript language support for Visual Studio Code",
     "version": "0.3.2",
