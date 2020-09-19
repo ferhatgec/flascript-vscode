@@ -1,109 +1,129 @@
 {
     ".source.flascript": {
-		"singleline comment": {
-			"prefix": "singleline comment",
-			"body": "//${0}",
-			"description": "Snippet for singleline comment."
-        }, 
+	"singleline comment": {
+		"prefix": "singleline comment",
+		"body": "//${0}",
+		"description": "Snippet for singleline comment."
+       	}, 
         "multiline comments": {
-			"prefix": "multiline comments",
-			"body": "/>${0}</",
-			"description": "Snippet for multiline comment."
-		},
-		"if condition": {
-			"prefix": "if",
-			"body": "if[${0}] -> { } <-",
-			"description": "Snippet for if condition."
+		"prefix": "multiline comments",
+		"body": "/>${0}</",
+		"description": "Snippet for multiline comment."
+	},
+	"if condition": {
+		"prefix": "if",
+		"body": "if[${0}] -> {\n} <-",
+		"description": "Snippet for if condition."
+	},
+	"else condition": {
+		"prefix": "else",
+		"body": "else -> {\n${0}}",
+		"description": "Snippet for if condition."
+	},
+	"while loop": {
+		"prefix": "while",
+		"body": "while[${0}] -> {\n} <-",
+		"description": "Snippet for if condition."
         },
         "new definition": {
-			"prefix": "defin",
-			"body": "defin[${0}] -> ${0} <-",
-			"description": "Snippet for new definition."
-		},
+		"prefix": "defin",
+		"body": "defin[${0}] -> ${0} <-",
+		"description": "Snippet for new definition."
+	},
+        "main function body": {
+		"prefix": "main()",
+		"body": "main() -> main {\n${0}\n} main;",
+		"description": "Snippet for new definition."
+	},
+        "import function": {
+		"prefix": "import",
+		"body": "import(<stdlib/${0}>) ->  <-",
+		"description": "Snippet for import."
+	},
         "new function define": {
-			"prefix": "func",
-			"body": "func -> ${0}() {\n\n}${0};",
-			"description": "Snippet for function define."
-		},
-		"new variable define": {
-			"prefix": "var",
-			"body": "var(${0}) -> \"\" -> \"\" <-",
-			"description": "Snippet for variable define."
-		},
-		"": {
-			"prefix": "ifdef",
-			"body": "ifdef(${0}) -> endif}",
-			"description": "Snippet for conditional directive."
-		},
-		"execute command": {
-			"prefix": "executepp",
-			"body": "executepp(\"\", \"\")",
-			"description": "Snippet for executing objects."
+		"prefix": "func",
+		"body": "func -> ${0}() {\n\n}${0};",
+		"description": "Snippet for function define."
+	},
+	"new variable define": {
+		"prefix": "var",
+		"body": "var(${0}) -> \"\" -> \"\" <-",
+		"description": "Snippet for variable define."
+	},
+	"": {
+		"prefix": "ifdef",
+		"body": "ifdef(${0}) -> endif}",
+		"description": "Snippet for conditional directive."
+	},
+	"execute command": {
+		"prefix": "executepp",
+		"body": "executepp(\"\", \"\")",
+		"description": "Snippet for executing objects."
         },
         "execute system command": {
-			"prefix": "exec",
-			"body": "exec(system -> ${0} ->)",
-			"description": "Snippet for executing system objects."
+		"prefix": "exec",
+		"body": "exec(system -> ${0} ->)",
+		"description": "Snippet for executing system objects."
         },
-        "execute system command with output": {
-			"prefix": "execout",
-			"body": "execout(-> ${0} <-)",
-			"description": "Snippet for executing objects with return."
-		},
-		"print function": {
-			"prefix": "print",
-			"body": "print(${0}) -> \"\";",
-			"description": "Snippet for calling print function."
-		},
-		"print function multiple strings": {
-			"prefix": "fprintf",
-			"body": "fprintf[<%${0}>(:\"\":)]",
-			"description": "Snippet for calling print function with multiple strings."
-		},
-		"print function multiple strings with newline": {
-			"prefix": "fprintln",
-			"body": "fprintln[<%${0}>(:\"\":)]",
-			"description": "Snippet for calling print function with multiple strings with newline."
+       	"execute system command with output": {
+		"prefix": "execout",
+		"body": "execout(-> ${0} <-)",
+		"description": "Snippet for executing objects with return."
+	},
+	"print function": {
+		"prefix": "print",
+		"body": "print(${0}) -> \"\";",
+		"description": "Snippet for calling print function."
+	},
+	"print function multiple strings": {
+		"prefix": "fprintf",
+		"body": "fprintf[<%${0}>(:\"\":)]",
+		"description": "Snippet for calling print function with multiple strings."
+	},
+	"print function multiple strings with newline": {
+		"prefix": "fprintln",
+		"body": "fprintln[<%${0}>(:\"\":)]",
+		"description": "Snippet for calling print function with multiple strings with newline."
         },
         "colorize string": {
-			"prefix": "colorized",
-			"body": "colorized[:${0}, ${0}:]",
-			"description": "Snippet for colorize string."
-		},
+		"prefix": "colorized",
+		"body": "colorized[:${0}, :]",
+		"description": "Snippet for colorize string."
+	},
         "colorize string without reset": {
-			"prefix": "rcolorized",
-			"body": "rcolorized[:${0}, ${0}:]",
-			"description": "Snippet for colorize string without reset."
-		},
+		"prefix": "rcolorized",
+		"body": "rcolorized[:${0}, :]",
+		"description": "Snippet for colorize string without reset."
+	},
         "read predefined macros": {
-			"prefix": "read",
-			"body": "read[${0}]",
-			"description": "Snippet for read predefined macros."
-		},
+		"prefix": "read",
+		"body": "read[${0}]",
+		"description": "Snippet for read predefined macros."
+	},
         "pseduo random integer generator": {
-			"prefix": "random",
-			"body": "random(${0})",
-			"description": "Snippet for generate pseudo random integer."
-		},
+		"prefix": "random",
+		"body": "random(${0})",
+		"description": "Snippet for generate pseudo random integer."
+	},
         "exit": {
-			"prefix": "exit",
-			"body": "exit(${0})",
-			"description": "Snippet for exit from application."
-		},
+		"prefix": "exit",
+		"body": "exit(${0})",
+		"description": "Snippet for exit from application."
+	},
         "statement": {
-			"prefix": "statement",
-			"body": "statement[${0}]",
-			"description": "Snippet for call statements."
-		},
+		"prefix": "statement",
+		"body": "statement[${0}]",
+		"description": "Snippet for call statements."
+	},
         "is file exist": {
-			"prefix": "is_exist",
-			"body": "is_exist[${0}]",
-			"description": "Snippet for returnable check file is exist."
-		},
+		"prefix": "is_exist",
+		"body": "is_exist[${0}]",
+		"description": "Snippet for returnable check file is exist."
+	},
         "check": {
-			"prefix": "check",
-			"body": "check[${0}]",
-			"description": "Snippet for returnable check command is exist."
-		}
+		"prefix": "check",
+		"body": "check[${0}]",
+		"description": "Snippet for returnable check command is exist."
+	}
 	}
 }
