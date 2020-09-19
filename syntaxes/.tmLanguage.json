@@ -22,15 +22,19 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.flascript",
-				"match": "\\b(exec|var|random|rcolorized|colorized|read|ifdef|endif|import|exit|execout|exec|for|return|fprintf|print|fprintln|main()|execpp|defin|func|if|else|while|)\\b"
+				"match": "\\b(exec|var|random|read|ifdef|endif|import|exit|execout|exec|for|return|fprintf|print|fprintln|main|execpp|defin|func|if|else|while|)\\b"
 			},
 			{
-				"name": "keyword",
+				"name": "keyword.other.flascript",
 				"match": "true|false|failure|success"
 			},
 			{
 				"name": "keyword.other.flascript",
 				"match": "->>|->|<-|>(\\s*)\\w+|@"
+			},
+			{
+				"name": "variable.flascript",
+				"match": "string|colorized|rcolorized|int|newline"
 			},
 			{
 				"name": "keyword.operator.flascript",

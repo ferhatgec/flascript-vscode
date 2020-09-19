@@ -42,7 +42,7 @@
 	},
         "new function define": {
 		"prefix": "func",
-		"body": "func -> ${0}() {\n\n}${0};",
+		"body": "func -> ${0}() {\n\n} ${0};",
 		"description": "Snippet for function define."
 	},
 	"new variable define": {
