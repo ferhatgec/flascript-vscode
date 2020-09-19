@@ -3,7 +3,7 @@
     "publisher": "ferhatgec",
     "displayName": "FlaScript",
     "description": "FlaScript language support for Visual Studio Code",
-    "version": "0.3.2",
+    "version": "0.3.21",
     "icon": "resource/FlaScript_Logo.png",
     "repository": {
         "type": "git",
